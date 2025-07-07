@@ -36,7 +36,7 @@ def save_image(image_buffer, file_path: str) -> None:
 def text_output(priority_counts: pd.Series) -> str:
     """Creates text table from data."""
     
-    output = ["Количество заявлений по приоритетам:"]
+    output = []
     output.append(f"{'Приоритет':<12} {'Количество заявлений':<20}")  # Header
     output.append("-" * 32)  # Separator line
 
