@@ -1,7 +1,8 @@
 {
   "faculties": [
     {
-      "name": "01.03.02 Прикладная математика и информатика",
+      "code": "01.03.02",
+      "name": "Прикладная математика и информатика",
       "study_forms": {
         "budgetnaya": {
           "title": "Бюджетная",
@@ -11,7 +12,7 @@
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDAxLjAzLjAyX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INC40L3RgtC10LvQu9C10LrRgtGD0LDQu9GM0L3Ri9C1INGB0LjRgdGC0LXQvNGLINGD0L%2FRgNCw0LLQu9C10L3QuNGPINGC0YDQsNC90YHQv9C%2B0YDRgtC%2B0Lx80J7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
             },
             "ochno_zaochnaya": {
-              "title": "Очно-заочная (вечерняя)",
+              "title": "Очно-заочная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDAxLjAzLjAyX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INC40L3RgtC10LvQu9C10LrRgtGD0LDQu9GM0L3Ri9C1INGB0LjRgdGC0LXQvNGLINGD0L%2FRgNCw0LLQu9C10L3QuNGPINGC0YDQsNC90YHQv9C%2B0YDRgtC%2B0Lx80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
             },
             "zaochnaya": {
@@ -21,14 +22,14 @@
           }
         },
         "platnaya_dogovornaya": {
-          "title": "Платная договорная",
+          "title": "Платная",
           "forms": {
             "ochnaya": {
               "title": "Очная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDAxLjAzLjAyX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INC40L3RgtC10LvQu9C10LrRgtGD0LDQu9GM0L3Ri9C1INGB0LjRgdGC0LXQvNGLINGD0L%2FRgNCw0LLQu9C10L3QuNGPINGC0YDQsNC90YHQv9C%2B0YDRgtC%2B0Lx80J7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
             },
             "ochno_zaochnaya": {
-              "title": "Очно-заочная (вечерняя)",
+              "title": "Очно-заочная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDAxLjAzLjAyX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INC40L3RgtC10LvQu9C10LrRgtGD0LDQu9GM0L3Ri9C1INGB0LjRgdGC0LXQvNGLINGD0L%2FRgNCw0LLQu9C10L3QuNGPINGC0YDQsNC90YHQv9C%2B0YDRgtC%2B0Lx80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
             },
             "zaochnaya": {
@@ -40,7 +41,8 @@
       }
     },
     {
-      "name": "15.03.03 Прикладная механика",
+      "code": "15.03.03",
+      "name": "Прикладная механика",
       "study_forms": {
         "budgetnaya": {
           "title": "Бюджетная",
@@ -50,7 +52,7 @@
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDE1LjAzLjAzX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INGG0LjRhNGA0L7QstGL0LUg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LIg0LTQuNC90LDQvNC40LrQtSDQuCDQv9GA0L7Rh9C90L7RgdGC0Lh80J7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
             },
             "ochno_zaochnaya": {
-              "title": "Очно-заочная (вечерняя)",
+              "title": "Очно-заочная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDE1LjAzLjAzX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INGG0LjRhNGA0L7QstGL0LUg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LIg0LTQuNC90LDQvNC40LrQtSDQuCDQv9GA0L7Rh9C90L7RgdGC0Lh80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
             },
             "zaochnaya": {
@@ -60,14 +62,14 @@
           }
         },
         "platnaya_dogovornaya": {
-          "title": "Платная договорная",
+          "title": "Платная",
           "forms": {
             "ochnaya": {
               "title": "Очная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDE1LjAzLjAzX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INGG0LjRhNGA0L7QstGL0LUg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LIg0LTQuNC90LDQvNC40LrQtSDQuCDQv9GA0L7Rh9C90L7RgdGC0Lh80J7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
             },
             "ochno_zaochnaya": {
-              "title": "Очно-заочная (вечерняя)",
+              "title": "Очно-заочная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDE1LjAzLjAzX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INGG0LjRhNGA0L7QstGL0LUg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LIg0LTQuNC90LDQvNC40LrQtSDQuCDQv9GA0L7Rh9C90L7RgdGC0Lh80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
             },
             "zaochnaya": {

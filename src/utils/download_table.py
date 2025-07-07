@@ -1,32 +1,27 @@
-from playwright.sync_api import sync_playwright
+from playwright.async_api import async_playwright
+import asyncio
+import aiofiles
 
 
-def download_table(url: str, name: str):
-    ''' Downloads dynamicly generated table from site. '''
+async def download_table(file_prefix: str, url: str) -> None:
+    """Downloads the #ps_search_results HTML content from a given URL of MPU and saves it to a .txt file."""
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True) # headless for browser show
-        context = browser.new_context()
-        page = context.new_page()
-        page.goto(url)
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)  # headless for browser show
+        context = await browser.new_context()
+        page = await context.new_page()
+        await page.goto(url)
 
-        print("Page loaded. Waiting for <div id=\"ps_search_results\" style=\"...\">")
-        
         try:
-            page.wait_for_selector("#ps_search_results", timeout=10000) # 10 secs
-            html_content = page.inner_html("#ps_search_results")
+            await page.wait_for_selector("#ps_search_results", timeout=30000)  # 30 secs
+            html_content = await page.inner_html("#ps_search_results")
 
-            with open("f{}.txt", "w", encoding="utf-8") as f:
-                f.write(html_content)
-
-            print("Saved div content to f{}.txt")
+            async with aiofiles.open(file_prefix, "w", encoding="utf-8") as f:
+                await f.write(html_content)
 
         except Exception as e:
-            print("Error:", str(e))
-            print("Saving full page HTML for debugging...")
-            with open("full_page.html", "w", encoding="utf-8") as f:
-                f.write(page.content())
+            print(str(e))
 
         finally:
-            context.close()
-            browser.close()
+            await context.close()
+            await browser.close()
