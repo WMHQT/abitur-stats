@@ -1,29 +1,23 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from io import BytesIO
+
+from utils.load_csv import load_csv
 
 
-def run_anal1(file_path='parsed_ps_search_results.csv'):
-    # Загрузка данных
-    try:
-        df = pd.read_csv(file_path, encoding='utf-8')
-    except FileNotFoundError:
-        return f"Файл {file_path} не найден. Проверьте путь к файлу.", None
-    except UnicodeDecodeError:
-        df = pd.read_csv(file_path, encoding='windows-1251')
+def save_infographic() -> BytesIO:
+    """Saves infographic in binary format to buffer."""
 
-    # Фильтрация записей с приоритетами 1–25
-    valid_priorities = df[df['Приоритет'].isin(range(1, 26))]
+    buff = BytesIO()
+    plt.savefig(buff, format='png', dpi=300, bbox_inches='tight')
+    plt.close()
+    buff.seek(0)
+    return buff
 
-    # Подсчет количества заявлений по приоритетам
-    priority_counts = valid_priorities['Приоритет'].value_counts().sort_index()
 
-    # Формирование текстового вывода
-    output = ["Количество заявлений по приоритетам:"]
-    for priority in range(1, 26):
-        count = priority_counts.get(priority, 0)
-        output.append(f"Приоритет {priority}: {count} заявлений")
-
-    # Создание инфографики
+def infographic_output(priority_counts: pd.Series) -> None:
+    """Creates infrographic from data."""
+    
     plt.figure(figsize=(10, 6))
     priority_counts.plot(kind='bar', color='skyblue', edgecolor='black')
     plt.title('Распределение заявлений по приоритетам')
@@ -32,9 +26,43 @@ def run_anal1(file_path='parsed_ps_search_results.csv'):
     plt.xticks(rotation=0)
     plt.grid(axis='y', linestyle='--', alpha=0.7)
 
-    # Сохранение графика
-    image_path = 'priority_distribution.png'
-    plt.savefig(image_path, dpi=300, bbox_inches='tight')
-    plt.close()
 
-    return "\n".join(output), image_path
+def save_image(image_buffer, file_path: str) -> None:
+    image_buffer.seek(0)
+    with open(file_path, 'wb') as f:
+        f.write(image_buffer.getvalue()) 
+
+
+def text_output(priority_counts: pd.Series) -> str:
+    """Creates text table from data."""
+    
+    output = ["Количество заявлений по приоритетам:"]
+    output.append(f"{'Приоритет':<12} {'Количество заявлений':<20}")  # Header
+    output.append("-" * 32)  # Separator line
+
+    for priority in range(1, 26):
+        count = priority_counts.get(priority, 0)
+        output.append(f"{priority:<12} {count:<20}")  # Formatted row
+
+    return "\n".join(output)
+
+
+def analyze_priority(file_path: str) -> pd.Series:
+    df = load_csv(file_path)
+
+    # Фильтрация записей с приоритетами 1–25
+    valid_priorities = df[df['Приоритет'].isin(range(1, 26))]
+
+    # Подсчет количества заявлений по приоритетам
+    priority_counts = valid_priorities['Приоритет'].value_counts().sort_index()
+
+    return priority_counts
+
+
+if __name__ == "__main__":
+    priority_counts = analyze_priority('data/csv/mpu/01.03.02.csv')
+    text = text_output(priority_counts)
+    infographic_output(priority_counts)
+    image_buffer = save_infographic()
+    print(text)
+    save_image(image_buffer, "01.03.02_applications_by_priority.png")
