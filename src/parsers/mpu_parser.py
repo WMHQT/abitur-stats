@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 
 
-INPUT_DIR = "src/data/raw/mpu"
-OUTPUT_DIR = "src/data/csv/mpu"
+INPUT_DIR = "data/raw/mpu"
+OUTPUT_DIR = "data/csv/mpu"
 FILENAME_PATTERN = r'^([\d\.]+)_([^_]+)_([^_]+)\.txt$'
 
 
@@ -155,8 +155,8 @@ def save_faculty_data(faculty_groups: dict) -> None:
         print(f"Saved {len(df)} records to {output_path}")
 
 
-if __name__ == "__main__":
-    print("Starting data processing...")
+def convert_to_csv() -> None:
+    print("Converting...")
     faculty_data = collect_data()
     save_faculty_data(faculty_data)
-    print("Processing completed!")
+    print("Conversion is finished!")

@@ -1,9 +1,14 @@
-FILE_PATH = "src/data/raw/mpu"
+import json
+
+
+FILE_PATH = "data/raw/mpu"
+JSON_PATH = "data/mpu_urls.json"
 
 
 def process_json(json_data: str) -> dict[str, str]:
     """Process MPU URLs from json file."""
-
+    
+    load_json()
     pairs = {}
 
     for faculty in json_data["faculties"]:
@@ -22,3 +27,10 @@ def process_json(json_data: str) -> dict[str, str]:
                 pairs[file_prefix] = url
 
     return pairs
+
+
+def load_json() -> str:
+    with open(JSON_PATH, "r", encoding="utf-8") as f:
+        json_data = json.load(f)
+    
+    return json_data

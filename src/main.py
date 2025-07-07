@@ -1,11 +1,16 @@
+from dotenv import load_dotenv
 import os
 from telegram.ext import Application, CommandHandler
-from anal1 import run_anal1
-from anal3 import run_anal3
-from anal4 import run_anal4
 
-# Токен вашего бота от @BotFather
-BOT_TOKEN = "8166225437:AAGAP3raCGt11MaeDFaERdJPT6_oKOctxuM"
+from analytics.anal1 import run_anal1
+from analytics.anal3 import run_anal3
+from analytics.anal4 import run_anal4
+
+
+# Bot's token
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 
 # Обработчик команды /start
 async def start(update, context):
