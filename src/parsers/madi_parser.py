@@ -1,6 +1,7 @@
-import requests
 import csv
 from io import StringIO
+
+import requests
 
 
 def get_direction_info(direction_number):

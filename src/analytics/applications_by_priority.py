@@ -1,5 +1,6 @@
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
+
 
 def run_anal1(file_path='parsed_ps_search_results.csv'):
     # Загрузка данных

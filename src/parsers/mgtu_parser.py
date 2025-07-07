@@ -1,7 +1,8 @@
-import PyPDF2
-import requests
 import io
 import re
+
+import PyPDF2
+import requests
 
 
 def check_student_in_pdf(pdf_url, student_id):

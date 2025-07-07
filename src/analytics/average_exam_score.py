@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def run_anal3(file_path='parsed_ps_search_results.csv'):
     # Загрузка данных
     try:
@@ -27,3 +28,5 @@ def run_anal3(file_path='parsed_ps_search_results.csv'):
     ]
 
     return "\n".join(output), None  # Нет изображения
+
+

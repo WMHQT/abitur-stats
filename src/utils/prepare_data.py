@@ -1,9 +1,8 @@
-import json
 import asyncio
 
 from parsers.mpu_parser import convert_to_csv
-from utils.process_json import process_json
 from utils.download_table import download_table
+from utils.process_json import process_json
 
 
 async def prepare_data() -> None:

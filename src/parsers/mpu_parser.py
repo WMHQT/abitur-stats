@@ -1,8 +1,7 @@
 import os
 import re
-from bs4 import BeautifulSoup
 import pandas as pd
-
+from bs4 import BeautifulSoup
 
 INPUT_DIR = "data/raw/mpu"
 OUTPUT_DIR = "data/csv/mpu"
@@ -12,7 +11,7 @@ FILENAME_PATTERN = r'^([\d\.]+)_([^_]+)_([^_]+)\.txt$'
 def read_html_content(file_path: str) -> str:
     """Read raw HTML content from a .txt file."""
     
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, encoding='utf-8') as f:
         return f.read()
 
 
@@ -120,7 +119,7 @@ def process_file(file_name: str) -> tuple[str, pd.DataFrame] | None:
         
         return faculty_code, df
         
-    except Exception as e:
+    except Exception:
         # print(f"Error processing {file_name}: {str(e)}")
         return None
 

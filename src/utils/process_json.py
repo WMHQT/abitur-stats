@@ -1,6 +1,5 @@
 import json
 
-
 FILE_PATH = "data/raw/mpu"
 JSON_PATH = "data/mpu_urls.json"
 
@@ -30,7 +29,7 @@ def process_json(json_data: str) -> dict[str, str]:
 
 
 def load_json() -> str:
-    with open(JSON_PATH, "r", encoding="utf-8") as f:
+    with open(JSON_PATH, encoding="utf-8") as f:
         json_data = json.load(f)
     
     return json_data

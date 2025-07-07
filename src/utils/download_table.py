@@ -1,6 +1,5 @@
-from playwright.async_api import async_playwright
-import asyncio
 import aiofiles
+from playwright.async_api import async_playwright
 
 
 async def download_table(file_prefix: str, url: str) -> None:
