@@ -2,30 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from utils.load_csv import load_csv
 
-def run_anal4(file_path='parsed_ps_search_results.csv'):
-    # Загрузка данных
-    try:
-        df = pd.read_csv(file_path, encoding='utf-8')
-    except FileNotFoundError:
-        return f"Файл {file_path} не найден. Проверьте путь к файлу.", None
-    except UnicodeDecodeError:
-        df = pd.read_csv(file_path, encoding='windows-1251')
 
-    # Фильтрация записей с приоритетами 1 и 2
-    valid_priorities = df[df['Приоритет'].isin([1, 2])]
-
-    # Группировка по приоритетам и необходимости общежития
-    counts = valid_priorities.groupby(['Приоритет', 'Общежитие']).size().unstack(fill_value=0)
-
-    # Формирование текстового вывода
-    output = ["Разбивка заявлений по приоритетам и необходимости общежития:", str(counts)]
-    for priority in [1, 2]:
-        output.append(f"\nПриоритет {priority}:")
-        for dorm_status in ['нужд.', 'не нужд.']:
-            count = counts.get(dorm_status, pd.Series(0)).get(priority, 0)
-            output.append(f"  {dorm_status}: {count} заявлений")
-
+def infographic_output(counts):
     # Подготовка данных для инфографики
     labels = ['Приоритет 1', 'Приоритет 2']
     dorm_needed = counts.get('нужд.', pd.Series(0))[[1, 2]].values
@@ -60,4 +40,36 @@ def run_anal4(file_path='parsed_ps_search_results.csv'):
     plt.savefig(image_path, dpi=300, bbox_inches='tight')
     plt.close()
 
-    return "\n".join(output), image_path
+
+def text_output(counts: pd.DataFrame) -> str:
+    """Creates text table from data."""
+    
+    output = []
+    output.append(f"{'Приоритет':<12} {'Нуждаются':<20} {'Не нуждаются':<20}")  # Header
+    output.append("-" * 52)  # Separator line
+
+    for priority in [1, 2]:
+        needed_count = counts.get('нужд.', pd.Series(0)).get(priority, 0)
+        not_needed_count = counts.get('не нужд.', pd.Series(0)).get(priority, 0)
+        output.append(f"{priority:<12} {needed_count:<20} {not_needed_count:<20}")
+
+    return "\n".join(output)
+
+
+def analyze_dormitory(file_path: str) -> pd.DataFrame:
+    df = load_csv(file_path)
+
+    # Фильтрация записей с приоритетами 1 и 2
+    valid_priorities = df[df['Приоритет'].isin([1, 2])]
+
+    # Группировка по приоритетам и необходимости общежития
+    counts = valid_priorities.groupby(['Приоритет', 'Общежитие']).size().unstack(fill_value=0)
+    
+    return counts
+
+
+if __name__ == "__main__":
+    counts = analyze_dormitory('data/csv/mpu/01.03.02.csv')
+    infographic_output(counts)
+    text = text_output(counts)
+    print(text)

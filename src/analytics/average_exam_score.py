@@ -1,5 +1,3 @@
-import pandas as pd
-
 from utils.load_csv import load_csv
 
 

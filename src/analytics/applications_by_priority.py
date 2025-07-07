@@ -15,7 +15,7 @@ def save_infographic() -> BytesIO:
     return buff
 
 
-def infographic_output(priority_counts: pd.Series) -> None:
+def infographic_output(priority_counts: pd.DataFrame) -> None:
     """Creates infrographic from data."""
     
     plt.figure(figsize=(10, 6))
@@ -33,7 +33,7 @@ def save_image(image_buffer, file_path: str) -> None:
         f.write(image_buffer.getvalue()) 
 
 
-def text_output(priority_counts: pd.Series) -> str:
+def text_output(priority_counts: pd.DataFrame) -> str:
     """Creates text table from data."""
     
     output = []
@@ -47,7 +47,7 @@ def text_output(priority_counts: pd.Series) -> str:
     return "\n".join(output)
 
 
-def analyze_priority(file_path: str) -> pd.Series:
+def analyze_priority(file_path: str) -> pd.DataFrame:
     df = load_csv(file_path)
 
     # Фильтрация записей с приоритетами 1–25
