@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from src.telegram.bot import create_bot
+from telegram_bot.bot import create_bot
 
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -8,7 +8,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 def main() -> None:
     if not BOT_TOKEN:
-        raise ValueError("Missing BOT_TOKEN in environment variables")
+        raise ValueError("Missing BOT_TOKEN in environment variables.")
 
     bot = create_bot(BOT_TOKEN)
     print("Bot is up.")

@@ -59,10 +59,11 @@ def analyze_priority(file_path: str) -> pd.DataFrame:
     return priority_counts
 
 
-if __name__ == "__main__":
-    priority_counts = analyze_priority('data/csv/mpu/01.03.02.csv')
+def run_analysis(file_path: str) -> tuple[str, BytesIO]:
+    priority_counts = analyze_priority(file_path)
+    
     text = text_output(priority_counts)
     infographic_output(priority_counts)
     image_buffer = save_infographic()
-    print(text)
-    save_image(image_buffer, "01.03.02_applications_by_priority.png")
+
+    return text, image_buffer
