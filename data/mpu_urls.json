@@ -41,6 +41,86 @@
       }
     },
     {
+      "code": "13.03.02.03",
+      "name": "Электроника и технологии сенсорики",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAyX9Ct0LvQtdC60YLRgNC%2B0L3QuNC60LAg0Lgg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0YHQtdC90YHQvtGA0LjQutC4fNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "13.03.03",
+      "name": "Энергетическое машиностроение",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDEzLjAzLjAzX9Cf0YDQvtC10LrRgtC40YDQvtCy0LDQvdC40LUg0Lgg0Y3QutGB0L%2FQu9GD0LDRgtCw0YbQuNGPINC00LLQuNCz0LDRgtC10LvQtdC5INC00LvRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQsCDQuCDQvNCw0LvQvtC5INGN0L3QtdGA0LPQtdGC0LjQutC4fNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
       "code": "15.03.03",
       "name": "Прикладная механика",
       "study_forms": {
@@ -75,6 +155,326 @@
             "zaochnaya": {
               "title": "Заочная",
               "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDE1LjAzLjAzX9Cf0YDQvtCz0YDQsNC80LzQuNGA0L7QstCw0L3QuNC1INC4INGG0LjRhNGA0L7QstGL0LUg0YLQtdGF0L3QvtC70L7Qs9C40Lgg0LIg0LTQuNC90LDQvNC40LrQtSDQuCDQv9GA0L7Rh9C90L7RgdGC0Lh80JfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.03.02",
+      "name": "Наземные транспортно-технологические комплексы",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAyX9CT0L7QvdC%2B0YfQvdGL0LUg0LDQstGC0L7QvNC%2B0LHQuNC70Lgg0Lgg0LzQvtGC0L7RhtC40LrQu9GLfNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.03.03.01",
+      "name": "Автомобили и транспортно-логистические системы",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80J7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80JfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80J7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INGC0YDQsNC90YHQv9C%2B0YDRgtC90L4t0LvQvtCz0LjRgdGC0LjRh9C10YHQutC40LUg0YHQuNGB0YLQtdC80Yt80JfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.03.03.02",
+      "name": "Инжиринг и эксплуатация транспортных систем",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjAzLjAzX9CY0L3QttC40L3QuNGA0LjQvdCzINC4INGN0LrRgdC%2F0LvRg9Cw0YLQsNGG0LjRjyDRgtGA0LDQvdGB0L%2FQvtGA0YLQvdGL0YUg0YHQuNGB0YLQtdC8fNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.05.01.01",
+      "name": "Спортивные транспортные средства",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ch0L%2FQvtGA0YLQuNCy0L3Ri9C1INGC0YDQsNC90YHQv9C%2B0YDRgtC90YvQtSDRgdGA0LXQtNGB0YLQstCwfNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.05.01.02",
+      "name": "Электромобили",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ct0LvQtdC60YLRgNC%2B0LzQvtCx0LjQu9C4fNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.05.01.03",
+      "name": "Автомобили и автомобильный сервис",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQntGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQntGH0L3Qvi3Qt9Cw0L7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQl9Cw0L7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQntGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQntGH0L3Qvi3Qt9Cw0L7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9CQ0LLRgtC%2B0LzQvtCx0LjQu9C4INC4INCw0LLRgtC%2B0LzQvtCx0LjQu9GM0L3Ri9C5INGB0LXRgNCy0LjRgXzQl9Cw0L7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "23.05.01.04",
+      "name": "Компьютерный инжиринг в автомобилестроении",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80J7Rh9C90LDRj3zQkdGO0LTQttC10YLQvdCw0Y8g0L7RgdC90L7QstCw"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80JfQsNC%2B0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80J7Rh9C90LDRj3zQn9C%2B0LvQvdC%2B0LUg0LLQvtC30LzQtdGJ0LXQvdC40LUg0LfQsNGC0YDQsNGC"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80J7Rh9C90L4t0LfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDIzLjA1LjAxX9Ca0L7QvNC%2F0YzRjtGC0LXRgNC90YvQuSDQuNC90LbQuNC90LjRgNC40L3QsyDQsiDQsNCy0YLQvtC80L7QsdC40LvQtdGB0YLRgNC%2B0LXQvdC40Lh80JfQsNC%2B0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            }
+          }
+        }
+      }
+    },
+    {
+      "code": "54.03.01.01",
+      "name": "Транспортный и промышленный дизайн",
+      "study_forms": {
+        "budgetnaya": {
+          "title": "Бюджетная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCe0YfQvdCw0Y980JHRjtC00LbQtdGC0L3QsNGPINC%2B0YHQvdC%2B0LLQsA%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCX0LDQvtGH0L3QsNGPfNCR0Y7QtNC20LXRgtC90LDRjyDQvtGB0L3QvtCy0LA%3D"
+            }
+          }
+        },
+        "platnaya_dogovornaya": {
+          "title": "Платная",
+          "forms": {
+            "ochnaya": {
+              "title": "Очная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCe0YfQvdCw0Y980J%2FQvtC70L3QvtC1INCy0L7Qt9C80LXRidC10L3QuNC1INC30LDRgtGA0LDRgg%3D%3D"
+            },
+            "ochno_zaochnaya": {
+              "title": "Очно-заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCe0YfQvdC%2BLdC30LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
+            },
+            "zaochnaya": {
+              "title": "Заочная",
+              "url": "https://mospolytech.ru/postupayushchim/priem-v-universitet/rating-abiturientov/?qs=MDAwMDAwMDU2XzAxfDU0LjAzLjAxX9Ci0YDQsNC90YHQv9C%2B0YDRgtC90YvQuSDQuCDQv9GA0L7QvNGL0YjQu9C10L3QvdGL0Lkg0LTQuNC30LDQudC9fNCX0LDQvtGH0L3QsNGPfNCf0L7Qu9C90L7QtSDQstC%2B0LfQvNC10YnQtdC90LjQtSDQt9Cw0YLRgNCw0YI%3D"
             }
           }
         }
