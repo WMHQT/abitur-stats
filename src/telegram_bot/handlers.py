@@ -5,10 +5,20 @@ from analytics import applications_by_priority
 from analytics import average_exam_score
 from analytics import neediness_in_dormitory
 
-FACULTY_CODES = [
-    "01.03.02",
-    "15.03.03",
-]
+FACULTY_CODES = {
+    '01.03.02': 'Прикладная математика и информатика',
+    '13.03.02.03': 'Электроника и технологии сенсорики', 
+    '13.03.03': 'Энергетическое машиностроение',
+    '15.03.03': 'Прикладная механика',
+    '23.03.02': 'Наземные транспортно-технологические комплексы',
+    '23.03.03.01': 'Автомобили и транспортно-логистические системы',
+    '23.03.03.02': 'Инжиринг и эксплуатация транспортных систем',
+    '23.05.01.01': 'Спортивные транспортные средства',
+    '23.05.01.02': 'Электромобили',
+    '23.05.01.03': 'Автомобили и автомобильный сервис',
+    '23.05.01.04': 'Компьютерный инжиринг в автомобилестроении',
+    '54.03.01.01': 'Транспортный и промышленный дизайн',
+}
 
 MAIN_MENU = {
     'applications_by_priority': '📊 Распределение по приоритетам',
@@ -24,9 +34,9 @@ def get_faculty_keyboard(selected: list = None) -> InlineKeyboardMarkup:
     selected = selected or []
     keyboard = []
     
-    for code in FACULTY_CODES:
+    for code, name in FACULTY_CODES.items():
         emoji = "✅" if code in selected else ""
-        keyboard.append([InlineKeyboardButton(f"{emoji} {code}", callback_data=f"faculty_{code}")])
+        keyboard.append([InlineKeyboardButton(f"{emoji} {code} {name}", callback_data=f"faculty_{code}")])
 
     keyboard.append([InlineKeyboardButton("Готово", callback_data="faculty_done")])
 
@@ -49,7 +59,11 @@ async def faculty_button_handler(update: Update, context: ContextTypes.DEFAULT_T
         code = data.replace("faculty_", "")
 
         if code == "done":
-            await query.edit_message_text(text="Факультеты выбраны.")
+            count = len(selected)
+            if len(selected):
+                await query.edit_message_text(text=f"Выбранное число факультетов: {count}")
+            else:
+                await query.edit_message_text(text="Вы не выбрали факультеты.")
             return
 
         if code in selected:
