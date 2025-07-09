@@ -1,18 +1,20 @@
 import asyncio
+import os
 
-from parsers.mpu_parser import convert_to_csv
-from utils.download_table import download_table
+from utils.download_table import download_all_tables
 from utils.process_json import process_json
+from parsers.mpu_parser import convert_to_csv
+
+OUTPUT_DIR = "data/raw/mpu"
 
 
 async def prepare_data() -> None:
     """Async data preparation pipeline for analytics."""
 
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     pairs = process_json()
-
-    tasks = [download_table(file_prefix, url) for file_prefix, url in pairs.items()]
-    await asyncio.gather(*tasks)
-
+    await download_all_tables(pairs)
     convert_to_csv()
 
 

@@ -5,6 +5,7 @@ from analytics import applications_by_priority
 from analytics import average_exam_score
 from analytics import neediness_in_dormitory
 from analytics import unique_students
+from utils.scheduler import get_last_update
 
 FACULTY_CODES = {
     '01.03.02': 'Прикладная математика и информатика',
@@ -86,7 +87,8 @@ async def faculty_button_handler(update: Update, context: ContextTypes.DEFAULT_T
 async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
         "/menu — выбор статистики\n"
-        "/faculty — выбор факультетов",
+        "/faculty — выбор факультетов\n"
+        "/update — время последнего обновления данных",
     )
 
 
@@ -124,3 +126,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         await update.message.reply_text(f"\n📊 Факультет: {faculty}\n{text}")
         if image:
             await update.message.reply_photo(photo=image)
+
+
+async def update_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    update_time = get_last_update()
+    await update.message.reply_text(f"Последнее обновление: \n{update_time}")
