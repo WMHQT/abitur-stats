@@ -1,11 +1,22 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from io import BytesIO
 
 from utils.load_csv import load_csv
 
 
-def infographic_output(counts):
+def save_infographic() -> BytesIO:
+    """Saves infographic in binary format to buffer."""
+
+    buff = BytesIO()
+    plt.savefig(buff, format='png', dpi=300, bbox_inches='tight')
+    plt.close()
+    buff.seek(0)
+    return buff
+
+
+def infographic_output(counts: pd.DataFrame) -> None:
     # Подготовка данных для инфографики
     labels = ['Приоритет 1', 'Приоритет 2']
     dorm_needed = counts.get('нужд.', pd.Series(0))[[1, 2]].values
@@ -35,11 +46,6 @@ def infographic_output(counts):
             ax.text(bar.get_x() + bar.get_width()/2., height, f'{int(height)}',
                     ha='center', va='bottom')
 
-    # Сохранение графика
-    image_path = 'dorm_priority_distribution.png'
-    plt.savefig(image_path, dpi=300, bbox_inches='tight')
-    plt.close()
-
 
 def text_output(counts: pd.DataFrame) -> str:
     """Creates text table from data."""
@@ -68,8 +74,11 @@ def analyze_dormitory(file_path: str) -> pd.DataFrame:
     return counts
 
 
-if __name__ == "__main__":
-    counts = analyze_dormitory('data/csv/mpu/01.03.02.csv')
-    infographic_output(counts)
+def run_analysis(file_path: str) -> tuple[str, BytesIO]:
+    counts = analyze_dormitory(file_path)
+    
     text = text_output(counts)
-    print(text)
+    infographic_output(counts)
+    image_buffer = save_infographic()
+
+    return text, image_buffer

@@ -4,6 +4,7 @@ from telegram.ext import ContextTypes
 from analytics import applications_by_priority
 from analytics import average_exam_score
 from analytics import neediness_in_dormitory
+from analytics import unique_students
 
 FACULTY_CODES = {
     '01.03.02': 'Прикладная математика и информатика',
@@ -25,6 +26,13 @@ MAIN_MENU = {
     'neediness_in_dormitory': '🏠 Необходимость в общежитии',
     'average_exam_score': '📈 Средний балл ЕГЭ',
     'unique_students': '👤 Уникальные студенты',
+}
+
+ANALYSIS_MAP = {
+    MAIN_MENU['applications_by_priority']: applications_by_priority.run_analysis,
+    MAIN_MENU['average_exam_score']: average_exam_score.run_analysis,
+    MAIN_MENU['neediness_in_dormitory']: neediness_in_dormitory.run_analysis,
+    # MAIN_MENU['unique_students']: unique_studens.run_analysis,
 }
 
 
@@ -104,18 +112,15 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         await update.message.reply_text("Выберите сначала хотя бы один факультет через /faculty")
         return
 
-    if user_input == MAIN_MENU['applications_by_priority']:
-        for faculty in selected_faculties:
-            file_path = f"data/csv/mpu/{faculty}.csv"
-            text, image = applications_by_priority.run_analysis(file_path)
-            await update.message.reply_text(f"\n📊 Факультет: {faculty}\n{text}")
-            await update.message.reply_photo(photo=image)
-
-    elif user_input == MAIN_MENU['average_exam_score']:
-        await update.message.reply_text("...")
-
-    elif user_input == MAIN_MENU['neediness_in_dormitory']:
-        await update.message.reply_text("...")
-
-    else:
+    if user_input not in ANALYSIS_MAP:
         await update.message.reply_text("Неизвестная команда.")
+        return
+
+    analysis_func = ANALYSIS_MAP[user_input]
+
+    for faculty in selected_faculties:
+        file_path = f"data/csv/mpu/{faculty}.csv"
+        text, image = analysis_func(file_path)
+        await update.message.reply_text(f"\n📊 Факультет: {faculty}\n{text}")
+        if image:
+            await update.message.reply_photo(photo=image)

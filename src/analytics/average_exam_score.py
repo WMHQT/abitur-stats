@@ -31,7 +31,8 @@ def analyze_exam_score(file_path: str) -> list[tuple[int, float]]:
     return [(count_1, mean_score_1), (count_2, mean_score_2)]
 
 
-if __name__ == "__main__":
-    data = analyze_exam_score('data/csv/mpu/01.03.02.csv')
+def run_analysis(file_path: str) -> tuple[str, None]:
+    data = analyze_exam_score(file_path)
     text = text_output(data)
-    print(text)
+
+    return text, None
