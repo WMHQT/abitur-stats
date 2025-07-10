@@ -2,6 +2,7 @@ import aiofiles
 import asyncio
 import os
 from playwright.async_api import async_playwright, BrowserContext
+import time
 from tqdm.asyncio import tqdm_asyncio
 
 
@@ -11,6 +12,7 @@ async def download_table(context: BrowserContext, file_prefix: str, url: str) ->
 
     try:
         await page.goto(url)
+        time.sleep(1)
         await page.wait_for_selector("#ps_search_results", timeout=30000)
         html_content = await page.inner_html("#ps_search_results")
 
@@ -29,7 +31,7 @@ async def download_all_tables(pairs: dict[str, str], max_concurrent_tasks: int =
     """Orchestrates downloading multiple tables concurrently."""
 
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=False)
         context = await browser.new_context()
 
         semaphore = asyncio.Semaphore(max_concurrent_tasks)
