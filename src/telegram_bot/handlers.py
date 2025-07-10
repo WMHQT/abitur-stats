@@ -34,6 +34,8 @@ MAIN_MENU = {
     'neediness_in_dormitory': '🏠 Необходимость в общежитии',
     'average_exam_score': '📈 Средний балл ЕГЭ',
     'unique_students': '👤 Уникальные студенты',
+    'mgtu': '☎️ Статистика по МГТУ',
+    'madi': '☎️ Статистика по МАДИ',
 }
 
 ANALYSIS_MAP = {
@@ -41,6 +43,8 @@ ANALYSIS_MAP = {
     MAIN_MENU['average_exam_score']: average_exam_score.run_analysis,
     MAIN_MENU['neediness_in_dormitory']: neediness_in_dormitory.run_analysis,
     MAIN_MENU['unique_students']: unique_students.run_analysis,
+    MAIN_MENU['mgtu']: mgtu_parser.run_analysis,
+    MAIN_MENU['madi']: madi_parser.run_analysis,
 }
 
 
@@ -116,6 +120,15 @@ async def specialization_handler(update: Update, context: ContextTypes.DEFAULT_T
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_input = update.message.text
     selected_specializations = context.user_data.get("selected_specializations")
+
+    if user_input == MAIN_MENU['mgtu']:
+        await update.message.reply_text('🐢 Бот собирает данные, подождите')
+        await update.message.reply_text(mgtu_parser.run_analysis())
+        return
+
+    if user_input == MAIN_MENU['madi']:
+        await update.message.reply_text(madi_parser.run_analysis())
+        return
 
     if not selected_specializations:
         await update.message.reply_text("Выберите сначала хотя бы один направлений через /specialization")
