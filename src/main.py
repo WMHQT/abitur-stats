@@ -7,6 +7,7 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 
 def main() -> None:
+    print("ad")
     if not BOT_TOKEN:
         raise ValueError("Missing BOT_TOKEN in environment variables.")
 
