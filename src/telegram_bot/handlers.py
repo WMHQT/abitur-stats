@@ -37,17 +37,17 @@ ANALYSIS_MAP = {
 }
 
 
-def get_faculty_keyboard(selected: list = None) -> InlineKeyboardMarkup:
-    """Generate inline keyboard with faculty selection."""
+def get_specialization_keyboard(selected: list = None) -> InlineKeyboardMarkup:
+    """Generate inline keyboard with specialization selection."""
     
     selected = selected or []
     keyboard = []
     
     for code, name in FACULTY_CODES.items():
         emoji = "✅" if code in selected else ""
-        keyboard.append([InlineKeyboardButton(f"{emoji} {code} {name}", callback_data=f"faculty_{code}")])
+        keyboard.append([InlineKeyboardButton(f"{emoji} {code} {name}", callback_data=f"specialization_{code}")])
 
-    keyboard.append([InlineKeyboardButton("Готово", callback_data="faculty_done")])
+    keyboard.append([InlineKeyboardButton("Готово", callback_data="specialization_done")])
 
     return InlineKeyboardMarkup(keyboard)
 
@@ -57,22 +57,22 @@ def get_main_menu_keyboard() -> ReplyKeyboardMarkup:
     return ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
 
 
-async def faculty_button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def specialization_button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     query = update.callback_query
     await query.answer()
 
     data = query.data
-    selected = context.user_data.get("selected_faculties", [])
+    selected = context.user_data.get("selected_specializations", [])
 
-    if data.startswith("faculty_"):
-        code = data.replace("faculty_", "")
+    if data.startswith("specialization_"):
+        code = data.replace("specialization_", "")
 
         if code == "done":
             count = len(selected)
             if len(selected):
-                await query.edit_message_text(text=f"Выбранное число факультетов: {count}")
+                await query.edit_message_text(text=f"Выбранное число направлений: {count}")
             else:
-                await query.edit_message_text(text="Вы не выбрали факультеты.")
+                await query.edit_message_text(text="Вы не выбрали направлений.")
             return
 
         if code in selected:
@@ -80,15 +80,15 @@ async def faculty_button_handler(update: Update, context: ContextTypes.DEFAULT_T
         else:
             selected.append(code)
 
-        context.user_data["selected_faculties"] = selected
-        await query.edit_message_reply_markup(reply_markup=get_faculty_keyboard(selected))
+        context.user_data["selected_specializations"] = selected
+        await query.edit_message_reply_markup(reply_markup=get_specialization_keyboard(selected))
 
 
 async def start_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(
-        "/menu — выбор статистики\n"
-        "/faculty — выбор факультетов\n"
-        "/update — время последнего обновления данных",
+        "/menu — выбор статистики.\n"
+        "/specialization — выбор направлений.\n"
+        "/update — время последнего обновления данных.",
     )
 
 
@@ -99,19 +99,19 @@ async def menu_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     )
 
 
-async def faculty_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Start faculty selection process."""
+async def specialization_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Start specialization selection process."""
     
-    context.user_data["selected_faculties"] = context.user_data.get("selected_faculties", [])
-    await update.message.reply_text("Выберите факультеты:", reply_markup=get_faculty_keyboard(context.user_data["selected_faculties"]))
+    context.user_data["selected_specializations"] = context.user_data.get("selected_specializations", [])
+    await update.message.reply_text("Выберите направленийы:", reply_markup=get_specialization_keyboard(context.user_data["selected_specializations"]))
 
 
 async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_input = update.message.text
-    selected_faculties = context.user_data.get("selected_faculties")
+    selected_specializations = context.user_data.get("selected_specializations")
 
-    if not selected_faculties:
-        await update.message.reply_text("Выберите сначала хотя бы один факультет через /faculty")
+    if not selected_specializations:
+        await update.message.reply_text("Выберите сначала хотя бы один направлений через /specialization")
         return
 
     if user_input not in ANALYSIS_MAP:
@@ -120,10 +120,10 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
 
     analysis_func = ANALYSIS_MAP[user_input]
 
-    for faculty in selected_faculties:
-        file_path = f"data/csv/mpu/{faculty}.csv"
+    for specialization in selected_specializations:
+        file_path = f"data/csv/mpu/{specialization}.csv"
         text, image = analysis_func(file_path)
-        await update.message.reply_text(f"\n📊 Факультет: {faculty}\n{text}")
+        await update.message.reply_text(f"\n📊 Напраление: {specialization}\n{text}")
         if image:
             await update.message.reply_photo(photo=image)
 
