@@ -41,45 +41,36 @@ def count_applications_by_direction(pdf_url):
         return {}
 
 
-def run_analysis(prefix):
+def run_analysis():
     direction_counts = count_applications_by_direction("https://priem.bmstu.ru/lists/upload/registered/registered-first.pdf")
-
-    print(f"\nГруппа 13:")
-    print("-" * 40)
+    result = ''
+    result += "Группа 13:\n"
+    result += "-" * 40 + '\n'
     filtered = {k: v for k, v in direction_counts.items() if k.startswith('13')}
     sum = 0
     for direction, count in sorted(filtered.items()):
-        print(f"Код направления: {direction}")
-        print(f"Количество заявлений: {count}\n")
+        result += f"Код направления: {direction}\n"
+        result += f"Количество заявлений: {count}\n\n"
         sum += count
-    print(f"\nВсего заявлений: {sum}")
+    result += f"\nВсего заявлений: {sum}\n"
 
-    print(f"\nГруппа 15:")
-    print("-" * 40)
+    result += f"\nГруппа 15:\n"
+    result += "-" * 40 + '\n'
     filtered = {k: v for k, v in direction_counts.items() if k.startswith('15')}
     sum = 0
     for direction, count in sorted(filtered.items()):
-        print(f"Код направления: {direction}")
-        print(f"Количество заявлений: {count}\n")
+        result += f"Код направления: {direction}\n"
+        result += f"Количество заявлений: {count}\n\n"
         sum += count
-    print(f"\nВсего заявлений: {sum}")
+    result += f"\nВсего заявлений: {sum}\n"
 
-    print(f"\nГруппа 23:")
-    print("-" * 40)
+    result += f"\nГруппа 23:\n"
+    result += "-" * 40 + '\n'
     filtered = {k: v for k, v in direction_counts.items() if k.startswith('23')}
     sum = 0
     for direction, count in sorted(filtered.items()):
-        print(f"Код направления: {direction}")
-        print(f"Количество заявлений: {count}\n")
+        result += f"Код направления: {direction}\n"
+        result += f"Количество заявлений: {count}\n\n"
         sum += count
-    print(f"\nВсего заявлений: {sum}")
-    # return filtered
-
-
-# Пример использования
-
-# Пример использования
-# results = count_applications_by_direction("https://example.com/students.pdf")
-results = count_applications_by_direction("https://priem.bmstu.ru/lists/upload/registered/registered-first.pdf")
-filter_by_prefix(results, "15")
-# print(results)
+    result += f"\nВсего заявлений: {sum}\n"
+    return result

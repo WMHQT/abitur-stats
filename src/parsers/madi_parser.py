@@ -48,37 +48,38 @@ def get_direction_info(direction_number):
         return []
 
 
-def run_analysis(direction_number):
+def run_analysis():
     results13 = get_direction_info('13.')
     results15 = get_direction_info('15.')
     results23 = get_direction_info('23.')
-
-    print(f"Группа 13:\n")
-    print("-" * 40)
+    result = ''
+    result += "Группа 13:\n"
+    result += "-" * 40 + '\n'
     sum = 0
     for i, info in enumerate(results13, 1):
-        print(f"Код направления: {info['full_direction']}")
-        print(f"Количество заявлений: {info['applications_count']}")
+        result += f"Код направления: {info['full_direction']}\n"
+        result += f"Количество заявлений: {info['applications_count']}\n\n"
         sum += info['applications_count']
-    print(f"\nВсего заявлений: {sum}")
+    result += f"\nВсего заявлений: {sum}\n\n"
 
-    print(f"Группа 15:\n")
-    print("-" * 40)
+    result += f"Группа 15:\n"
+    result += "-" * 40 + '\n'
     sum = 0
     for i, info in enumerate(results15, 1):
-        print(f"Код направления: {info['full_direction']}")
-        print(f"Количество заявлений: {info['applications_count']}")
+        result += f"Код направления: {info['full_direction']}\n"
+        result += f"Количество заявлений: {info['applications_count']}\n\n"
         sum += info['applications_count']
-    print(f"\nВсего заявлений: {sum}")
+    result += f"\nВсего заявлений: {sum}\n"
 
-    print(f"\nГруппа 23:\n")
-    print("-" * 40)
+    result += f"\nГруппа 23:\n"
+    result += "-" * 40 + '\n'
     sum = 0
     for i, info in enumerate(results23, 1):
-        print(f"Код направления: {info['full_direction']}")
-        print(f"Количество заявлений: {info['applications_count']}")
+        result += f"Код направления: {info['full_direction']}\n"
+        result += f"Количество заявлений: {info['applications_count']}\n\n"
         sum += info['applications_count']
-    print(f"\nВсего заявлений: {sum}")
+    result += f"\nВсего заявлений: {sum}\n"
+    return result
 
 def export_to_csv(direction_number, filename=None):
     results = get_direction_info(direction_number)
@@ -132,15 +133,3 @@ def check_student_enrollment(student_id):
 
     except:
         return False
-
-#
-# # # Использование
-# # student_id = "112312312"
-# # result = check_student_enrollment(student_id)
-# # print(result)
-# #
-# #
-# print_direction_info("15.")
-# # export_to_csv("15.")
-# # print("\nCSV формат:")
-# # print(get_csv_string("15."))
