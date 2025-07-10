@@ -47,17 +47,19 @@ def infographic_output(counts: pd.DataFrame) -> None:
                     ha='center', va='bottom')
 
 
-def text_output(counts: pd.DataFrame) -> str:
+def text_output(counts: pd.Series) -> str:
     """Creates text table from data."""
-    
-    output = []
-    output.append(f"{'Приоритет':<12} {'Нуждаются':<20} {'Не нуждаются':<20}")  # Header
-    output.append("-" * 52)  # Separator line
 
-    for priority in [1, 2]:
-        needed_count = counts.get('нужд.', pd.Series(0)).get(priority, 0)
-        not_needed_count = counts.get('не нужд.', pd.Series(0)).get(priority, 0)
-        output.append(f"{priority:<12} {needed_count:<20} {not_needed_count:<20}")
+    output = []
+
+    for i in [1, 2]:
+        needed_count = counts.get('нужд.', pd.Series(0)).get(i, 0)
+        not_needed_count = counts.get('не нужд.', pd.Series(0)).get(i, 0)
+
+        output.append(f"Приоритет: {i}")
+        output.append(f"нужд.: {needed_count}")
+        output.append(f"не нужд.: {not_needed_count}")
+        output.append("—" * 15)
 
     return "\n".join(output)
 
@@ -74,7 +76,7 @@ def analyze_dormitory(file_path: str) -> pd.DataFrame:
     return counts
 
 
-def run_analysis(file_path: str) -> tuple[str, BytesIO]:
+def run_analysis(file_path: str, specialization: str) -> tuple[str, BytesIO]:
     counts = analyze_dormitory(file_path)
     
     text = text_output(counts)

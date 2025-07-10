@@ -5,11 +5,12 @@ def text_output(data: list[tuple[int, float]]) -> str:
     """Creates text table from data."""
 
     output = []
-    output.append(f"{'Приоритет':<12} {'Средний балл ЕГЭ':<20} {'Количество заявлений':<20}")  # Header
-    output.append("-" * 52)  # Separator line
 
     for i, (count, average_score) in enumerate(data, start=1):
-        output.append(f"{i:<12} {average_score:<20.2f} {count:<20}")  # Formatted row
+        output.append(f"Приоритет: {i}")
+        output.append(f"Средний балл ЕГЭ: {average_score:.2f}")
+        output.append(f"Количество заявлений: {count}")
+        output.append("—" * 15)
 
     return "\n".join(output)
 
@@ -31,7 +32,7 @@ def analyze_exam_score(file_path: str) -> list[tuple[int, float]]:
     return [(count_1, mean_score_1), (count_2, mean_score_2)]
 
 
-def run_analysis(file_path: str) -> tuple[str, None]:
+def run_analysis(file_path: str, specialization: str) -> tuple[str, None]:
     data = analyze_exam_score(file_path)
     text = text_output(data)
 

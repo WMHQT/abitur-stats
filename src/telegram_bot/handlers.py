@@ -1,4 +1,11 @@
-from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton
+from telegram import (
+    Update,
+    InputMediaPhoto,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ReplyKeyboardMarkup,
+    KeyboardButton
+)
 from telegram.ext import ContextTypes
 
 from analytics import applications_by_priority
@@ -119,11 +126,12 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         return
 
     analysis_func = ANALYSIS_MAP[user_input]
-
+    
     for specialization in selected_specializations:
         file_path = f"data/csv/mpu/{specialization}.csv"
-        text, image = analysis_func(file_path)
-        await update.message.reply_text(f"\n📊 Напраление: {specialization}\n{text}")
+        text, image = analysis_func(file_path, specialization)
+
+        await update.message.reply_text(f"\n📊 Напраление: {specialization}\n\n{text}")
         if image:
             await update.message.reply_photo(photo=image)
 
