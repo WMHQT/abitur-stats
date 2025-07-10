@@ -40,7 +40,7 @@ ANALYSIS_MAP = {
     MAIN_MENU['applications_by_priority']: applications_by_priority.run_analysis,
     MAIN_MENU['average_exam_score']: average_exam_score.run_analysis,
     MAIN_MENU['neediness_in_dormitory']: neediness_in_dormitory.run_analysis,
-    # MAIN_MENU['unique_students']: unique_studens.run_analysis,
+    MAIN_MENU['unique_students']: unique_students.run_analysis,
 }
 
 

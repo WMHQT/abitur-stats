@@ -16,71 +16,113 @@ def save_infographic() -> BytesIO:
     return buff
 
 
-def infographic_output(counts: pd.DataFrame) -> None:
-    # Подготовка данных для инфографики
-    labels = ['Приоритет 1', 'Приоритет 2']
-    dorm_needed = counts.get('нужд.', pd.Series(0))[[1, 2]].values
-    dorm_not_needed = counts.get('не нужд.', pd.Series(0))[[1, 2]].values
-
-    # Настройка гистограммы
-    x = np.arange(len(labels))
-    width = 0.35
-
-    fig, ax = plt.subplots(figsize=(8, 6))
-    bars1 = ax.bar(x - width/2, dorm_needed, width, label='Нуждаются в общежитии', color='skyblue')
-    bars2 = ax.bar(x + width/2, dorm_not_needed, width, label='Не нуждаются в общежитии', color='lightcoral')
-
-    # Настройка осей и заголовка
+def infographic_output(counts: pd.DataFrame, specialization: str) -> None:
+    """Creates infographic with four-color coded bars."""
+    # Extract data
+    priorities = [1, 2]
+    
+    # Access values using .xs() for MultiIndex columns
+    budget_needed = counts.xs(('Бюджетная', 'нужд.'), axis=1)[priorities].values
+    budget_not = counts.xs(('Бюджетная', 'не нужд.'), axis=1)[priorities].values
+    paid_needed = counts.xs(('Платная', 'нужд.'), axis=1)[priorities].values
+    paid_not = counts.xs(('Платная', 'не нужд.'), axis=1)[priorities].values
+    
+    x = np.arange(len(priorities))
+    bar_width = 0.2
+    
+    fig, ax = plt.subplots(figsize=(12, 7))
+    
+    # Plot bars with different styles
+    budget_needed_bars = ax.bar(x - 1.5*bar_width, budget_needed, bar_width, 
+                               label='Бюджет, нуждается', color='skyblue', edgecolor='black')
+    budget_not_bars = ax.bar(x - 0.5*bar_width, budget_not, bar_width,
+                            label='Бюджет, не нуждается', color='skyblue', 
+                            edgecolor='black', hatch='//')
+    paid_needed_bars = ax.bar(x + 0.5*bar_width, paid_needed, bar_width,
+                             label='Платная, нуждается', color='salmon', 
+                             edgecolor='black')
+    paid_not_bars = ax.bar(x + 1.5*bar_width, paid_not, bar_width,
+                          label='Платная, не нуждается', color='salmon', 
+                          edgecolor='black', hatch='//')
+    
+    # Customize plot
     ax.set_xlabel('Приоритет')
     ax.set_ylabel('Количество заявлений')
-    ax.set_title('Разбивка заявлений по приоритетам и необходимости общежития')
+    ax.set_title(f'Разбивка заявлений по приоритетам и форме обучения для направления {specialization}')
     ax.set_xticks(x)
-    ax.set_xticklabels(labels)
+    ax.set_xticklabels([f'Приоритет {p}' for p in priorities])
     ax.legend()
     ax.grid(axis='y', linestyle='--', alpha=0.7)
-
-    # Добавление значений над столбцами
-    for bars in [bars1, bars2]:
+    
+    # Add value labels
+    for bars in [budget_needed_bars, budget_not_bars, paid_needed_bars, paid_not_bars]:
         for bar in bars:
             height = bar.get_height()
-            ax.text(bar.get_x() + bar.get_width()/2., height, f'{int(height)}',
-                    ha='center', va='bottom')
-
-
-def text_output(counts: pd.Series) -> str:
-    """Creates text table from data."""
-
-    output = []
-
-    for i in [1, 2]:
-        needed_count = counts.get('нужд.', pd.Series(0)).get(i, 0)
-        not_needed_count = counts.get('не нужд.', pd.Series(0)).get(i, 0)
-
-        output.append(f"Приоритет: {i}")
-        output.append(f"нужд.: {needed_count}")
-        output.append(f"не нужд.: {not_needed_count}")
-        output.append("—" * 15)
-
-    return "\n".join(output)
+            if height > 0:
+                ax.text(bar.get_x() + bar.get_width()/2, height, 
+                       f'{int(height)}', ha='center', va='bottom', fontsize=8)
 
 
 def analyze_dormitory(file_path: str) -> pd.DataFrame:
     df = load_csv(file_path)
-
-    # Фильтрация записей с приоритетами 1 и 2
-    valid_priorities = df[df['Приоритет'].isin([1, 2])]
-
-    # Группировка по приоритетам и необходимости общежития
-    counts = valid_priorities.groupby(['Приоритет', 'Общежитие']).size().unstack(fill_value=0)
     
-    return counts
+    # Map numeric codes to text labels
+    df['Основа обучения'] = df['Основа обучения'].map({0: 'Платная', 1: 'Бюджетная'})
+    # df['Общежитие'] = df['Общежитие'].map({0: 'не нужд.', 1: 'нужд.'})
+    
+    # Enforce categorical types to ensure all combinations are present
+    df['Основа обучения'] = pd.Categorical(df['Основа обучения'], categories=['Бюджетная', 'Платная'])
+    df['Общежитие'] = pd.Categorical(df['Общежитие'], categories=['нужд.', 'не нужд.'])
+    
+    # Filter valid priorities
+    valid_priorities = df[df['Приоритет'].isin(range(1, 26))]
+    
+    # Count applications by priority, funding type, and dorm need
+    priority_counts = pd.crosstab(
+        index=valid_priorities['Приоритет'],
+        columns=[
+            valid_priorities['Основа обучения'],
+            valid_priorities['Общежитие']
+        ],
+        margins=False,
+        dropna=False
+    )
+    
+    # Ensure all priorities 1-25 are present
+    full_index = pd.Index(range(1, 26), name='Приоритет')
+    priority_counts = priority_counts.reindex(full_index, fill_value=0)
+    
+    return priority_counts
+
+
+def text_output(counts: pd.DataFrame) -> str:
+    """Creates text table from data."""
+    output = []
+
+    priorities = [1, 2]
+
+    # Extract values for each category using .xs()
+    budget_needed = counts.xs(('Бюджетная', 'нужд.'), axis=1)[priorities].values
+    budget_not = counts.xs(('Бюджетная', 'не нужд.'), axis=1)[priorities].values
+    paid_needed = counts.xs(('Платная', 'нужд.'), axis=1)[priorities].values
+    paid_not = counts.xs(('Платная', 'не нужд.'), axis=1)[priorities].values
+
+    for idx, priority in enumerate(priorities):
+        output.append(f"Приоритет: {priority}")
+        output.append(f"бюджет, нужд.: {int(budget_needed[idx])}")
+        output.append(f"бюджет, не нужд.: {int(budget_not[idx])}")
+        output.append(f"платная, нужд.: {int(paid_needed[idx])}")
+        output.append(f"платная, не нужд.: {int(paid_not[idx])}")
+        output.append("—" * 12)
+
+    return "\n".join(output)
 
 
 def run_analysis(file_path: str, specialization: str) -> tuple[str, BytesIO]:
     counts = analyze_dormitory(file_path)
     
     text = text_output(counts)
-    infographic_output(counts)
+    infographic_output(counts, specialization)
     image_buffer = save_infographic()
 
     return text, image_buffer
