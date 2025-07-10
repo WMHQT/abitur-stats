@@ -114,8 +114,8 @@ def process_file(file_name: str) -> tuple[str, pd.DataFrame] | None:
         valid_rows = validate_rows(headers, data_rows)
         df = create_dataframe(headers, valid_rows)
         
-        df['Форма обучения'] = study_type
-        df['Основа обучения'] = form
+        df['Форма обучения'] = form
+        df['Основа обучения'] = study_type
         
         return faculty_code, df
         
