@@ -20,7 +20,7 @@ from utils.scheduler import periodic_update
 
 async def post_init(application: Application) -> None:
     """Start background task after bot starts."""
-    application.bot_data["background_task"] = asyncio.create_task(periodic_update())
+    # application.bot_data["background_task"] = asyncio.create_task(periodic_update())
 
 
 def create_bot(token: str) -> Application:
