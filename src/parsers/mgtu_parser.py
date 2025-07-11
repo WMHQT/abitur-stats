@@ -45,7 +45,7 @@ def run_analysis():
     direction_counts = count_applications_by_direction("https://priem.bmstu.ru/lists/upload/registered/registered-first.pdf")
     result = ''
     result += "Группа 13:\n"
-    result += "-" * 40 + '\n'
+    result += "—" * 14 + '\n'
     filtered = {k: v for k, v in direction_counts.items() if k.startswith('13')}
     sum = 0
     for direction, count in sorted(filtered.items()):

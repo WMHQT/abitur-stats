@@ -12,6 +12,9 @@ from analytics import applications_by_priority
 from analytics import average_exam_score
 from analytics import neediness_in_dormitory
 from analytics import unique_students
+
+from parsers import mgtu_parser, madi_parser
+
 from utils.scheduler import get_last_update
 
 FACULTY_CODES = {
