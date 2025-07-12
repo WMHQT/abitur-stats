@@ -34,5 +34,5 @@ async def periodic_update():
         except Exception as e:
             print(f"Error during data update: {e}")
 
-        # Run every 5 minutes (300 secs)
-        await asyncio.sleep(300)
+        # Run every 20 minutes (1200 secs)
+        await asyncio.sleep(1200)

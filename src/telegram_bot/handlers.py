@@ -15,7 +15,7 @@ from analytics import unique_applicants
 
 from parsers import mgtu_parser, madi_parser
 
-from utils.scheduler import get_last_update
+from utils.schedule import get_last_update
 
 FACULTY_CODES = {
     '01.03.02': 'Прикладная математика и информатика',

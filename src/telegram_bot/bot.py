@@ -15,12 +15,12 @@ from telegram_bot.handlers import (
     specialization_button_handler,
 )
 
-from utils.scheduler import periodic_update
+from utils.schedule import periodic_update
 
 
 async def post_init(application: Application) -> None:
     """Start background task after bot starts."""
-    # application.bot_data["background_task"] = asyncio.create_task(periodic_update())
+    application.bot_data["background_task"] = asyncio.create_task(periodic_update())
 
 
 def create_bot(token: str) -> Application:
