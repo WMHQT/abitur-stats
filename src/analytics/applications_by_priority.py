@@ -72,7 +72,12 @@ def text_output(priority_counts: pd.DataFrame) -> str:
     #     count = priority_counts.get(priority, 0)
     #     output.append(f"{priority:<12} {count:<20}")  # Formatted row
 
-    output.append(f"Кол-во заявлений: на бюджет — {priority_counts['Бюджетная'].sum()}, на платное — {priority_counts['Платная'].sum()}\n")
+    budget = priority_counts['Бюджетная'].sum()
+    paid = priority_counts['Платная'].sum()
+    total = budget + paid
+
+    output.append(f"Кол-во заявлений: {total}")
+    output.append(f"На бюджет — {budget}, на платное — {paid}\n")
 
     return "\n".join(output)
 

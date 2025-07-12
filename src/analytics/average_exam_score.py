@@ -9,7 +9,7 @@ def text_output(data: list[tuple[int, float]]) -> str:
     for i, (count, average_score) in enumerate(data, start=1):
         output.append(f"Приоритет: {i}")
         output.append(f"Средний балл ЕГЭ: {average_score:.2f}")
-        output.append(f"Количество заявлений: {count}")
+        output.append(f"Кол-во заявлений: {count}")
         output.append("—" * 15)
 
     return "\n".join(output)

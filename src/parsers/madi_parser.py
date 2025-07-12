@@ -62,11 +62,11 @@ def generate_group_output(group_name: str, directions: dict, total: int) -> list
     for direction, count in sorted(directions.items()):
         if direction in FACULTY_CODES_SHORT:
             output.append(f"\nКод направления: {direction}")
-            output.append(f"Количество заявлений: {count}")
+            output.append(f"Кол-во заявлений: {count}")
     if len(output) == 1:
         output.append("\nНет аналогичных направлений.") 
     # output.append(f"\nВсего заявлений: {total}")
-    output.append("—" * 12)
+    output.append("—" * 16)
 
     return output
 
@@ -80,7 +80,6 @@ def run_analysis() -> str:
     for group in groups:
         direction_counts = count_applications_by_direction(f"{group}.")
         directions, total = group_directions_by_prefix(direction_counts, group)
-        print(directions, total)
         output.extend(generate_group_output(group, directions, total))
 
     return "\n".join(output)

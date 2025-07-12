@@ -11,7 +11,7 @@ from telegram.ext import ContextTypes
 from analytics import applications_by_priority
 from analytics import average_exam_score
 from analytics import neediness_in_dormitory
-from analytics import unique_students
+from analytics import unique_applicants
 
 from parsers import mgtu_parser, madi_parser
 
@@ -36,7 +36,7 @@ MAIN_MENU = {
     'applications_by_priority': '📊 Распределение по приоритетам',
     'neediness_in_dormitory': '🏠 Необходимость в общежитии',
     'average_exam_score': '📈 Средний балл ЕГЭ',
-    'unique_students': '👤 Уникальные студенты',
+    'unique_applicants': '👤 Уникальные абитуриенты',
     'mgtu': '☎️ Статистика по МГТУ',
     'madi': '☎️ Статистика по МАДИ',
 }
@@ -45,7 +45,7 @@ ANALYSIS_MAP = {
     MAIN_MENU['applications_by_priority']: applications_by_priority.run_analysis,
     MAIN_MENU['average_exam_score']: average_exam_score.run_analysis,
     MAIN_MENU['neediness_in_dormitory']: neediness_in_dormitory.run_analysis,
-    MAIN_MENU['unique_students']: unique_students.run_analysis,
+    MAIN_MENU['unique_applicants']: unique_applicants.run_analysis,
     MAIN_MENU['mgtu']: mgtu_parser.run_analysis,
     MAIN_MENU['madi']: madi_parser.run_analysis,
 }
@@ -133,8 +133,8 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
         await update.message.reply_text(madi_parser.run_analysis())
         return
 
-    if user_input == MAIN_MENU['unique_students']:
-        await update.message.reply_text(unique_students.run_analysis())
+    if user_input == MAIN_MENU['unique_applicants']:
+        await update.message.reply_text(unique_applicants.run_analysis())
         return
 
     if not selected_specializations:

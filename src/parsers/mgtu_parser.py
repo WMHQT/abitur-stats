@@ -57,10 +57,10 @@ def generate_group_output(group_name: str, directions: dict, total: int) -> list
     for direction, count in sorted(directions.items()):
         if direction in FACULTY_CODES_SHORT:
             output.append(f"\nКод направления: {direction}")
-            output.append(f"Количество заявлений: {count}")
+            output.append(f"Кол-во заявлений: {count}")
 
     # output.append(f"\nВсего заявлений: {total}")
-    output.append("—" * 12)
+    output.append("—" * 13)
 
     return output
 

@@ -6,18 +6,18 @@ from utils.load_csv import load_csv
 
 
 def text_output(data: List[Tuple[str, int]]) -> str:
-    """Creates text table from grouped unique student counts."""
+    """Creates text table from grouped unique applicant counts."""
     output = []
     
     for group, count in data:
-        output.append(f"Группа направлений: {group}.XX.XX")
-        output.append(f"Количество уникальных студентов: {count}")
-        output.append("—" * 30)
+        output.append(f"Группа направлений: {group}")
+        output.append(f"\nКол-во уникальных абитуриентов: {count}")
+        output.append("—" * 19)
     
     return "\n".join(output)
 
 
-def analyze_unique_students(dir_path: str) -> List[Tuple[str, int]]:
+def analyze_unique_applicants(dir_path: str) -> List[Tuple[str, int]]:
     """Analyzes CSV files grouped by first two digits of filename prefix."""
     
     groups = {}  # Dictionary to store unique codes per group
@@ -40,7 +40,7 @@ def analyze_unique_students(dir_path: str) -> List[Tuple[str, int]]:
         file_path = os.path.join(dir_path, filename)
         
         try:
-            # Load CSV and get unique student codes
+            # Load CSV and get unique applicant codes
             df = load_csv(file_path)
             unique_codes = df['Уникальныйкод'].unique()
             
@@ -58,10 +58,10 @@ def analyze_unique_students(dir_path: str) -> List[Tuple[str, int]]:
     return result
 
 
-def run_analysis(file_path: str, dir_path: str = 'data/csv/mpu', specialization: str = None) -> Tuple[str, None]:
-    """Main analysis function for unique student counting."""
+def run_analysis(dir_path: str = 'data/csv/mpu') -> Tuple[str, None]:
+    """Main analysis function for unique applicant counting."""
     
-    data = analyze_unique_students(dir_path)
+    data = analyze_unique_applicants(dir_path)
     text = text_output(data)
     
-    return text, None
+    return text
