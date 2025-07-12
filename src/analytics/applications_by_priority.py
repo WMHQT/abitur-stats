@@ -4,7 +4,7 @@ from io import BytesIO
 
 from utils.load_csv import load_csv
 
-MAX_PRIORITY = 10
+MAX_PRIORITY = 11
 
 
 def save_infographic() -> BytesIO:
@@ -33,7 +33,7 @@ def infographic_output(priority_counts: pd.DataFrame, specialization: str) -> No
     bars_paid = ax.bar(priority_counts.index, paid_values, bottom=budget_values,
                        color='salmon', edgecolor='black', label='Платная')
 
-    ax.set_title(f'Распределение заявлений по приоритетам и форме обучения для направления {specialization}')
+    ax.set_title(f'Распределение заявлений по приоритетам и основе обучения для направления {specialization}')
     ax.set_xlabel('Приоритет')
     ax.set_ylabel('Количество заявлений')
     ax.set_xticks(priority_counts.index)

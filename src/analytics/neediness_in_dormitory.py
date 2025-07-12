@@ -48,7 +48,7 @@ def infographic_output(counts: pd.DataFrame, specialization: str) -> None:
     # Customize plot
     ax.set_xlabel('Приоритет')
     ax.set_ylabel('Количество заявлений')
-    ax.set_title(f'Разбивка заявлений по приоритетам и форме обучения для направления {specialization}')
+    ax.set_title(f'Разбивка заявлений по приоритетам и основе обучения для направления {specialization}')
     ax.set_xticks(x)
     ax.set_xticklabels([f'Приоритет {p}' for p in priorities])
     ax.legend()

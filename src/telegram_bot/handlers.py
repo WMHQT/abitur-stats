@@ -125,12 +125,16 @@ async def button_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     selected_specializations = context.user_data.get("selected_specializations")
 
     if user_input == MAIN_MENU['mgtu']:
-        await update.message.reply_text('🐢 Бот собирает данные, подождите')
+        await update.message.reply_text('Бот собирает и обрабатывает данные, подождите...')
         await update.message.reply_text(mgtu_parser.run_analysis())
         return
 
     if user_input == MAIN_MENU['madi']:
         await update.message.reply_text(madi_parser.run_analysis())
+        return
+
+    if user_input == MAIN_MENU['unique_students']:
+        await update.message.reply_text(unique_students.run_analysis())
         return
 
     if not selected_specializations:
